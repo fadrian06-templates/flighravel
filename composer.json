@@ -25,14 +25,20 @@
       "php -r \"if (!file_exists('.env.php')) copy('.env.dist.php', '.env.php');\""
     ],
     "ci": [
-      "phpunit"
+      "phpunit",
+      "phpstan -cphpstan.neon --no-progress --no-ansi"
     ]
   },
   "config": {
-    "sort-packages": true
+    "sort-packages": true,
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    }
   },
   "require-dev": {
     "guzzlehttp/guzzle": "^7.9",
+    "phpstan/extension-installer": "^1.4",
+    "phpstan/phpstan": "^2.1",
     "phpunit/phpunit": "^11.5",
     "symfony/var-dumper": "^7.2"
   }

@@ -11,7 +11,7 @@ abstract class FeatureTestCase extends TestCase
 {
   protected static Client $client;
 
-  function __construct(string $name)
+  function __construct(string $name) // @phpstan-ignore-line
   {
     parent::__construct($name);
 
