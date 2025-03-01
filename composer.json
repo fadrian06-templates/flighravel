@@ -30,7 +30,7 @@
       "phpstan -cphpstan.neon --no-progress --no-ansi",
       "rector --dry-run --no-progress-bar --no-ansi",
       "phpmd app resources/views routes .env.dist.php .env.php index.php rector.php tests text phpmd.xml",
-      "phpcs -n"
+      "phpcs --no-colors"
     ]
   },
   "config": {
