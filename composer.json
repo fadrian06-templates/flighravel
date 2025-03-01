@@ -9,7 +9,8 @@
     ],
     "pre-update-cmd": [
       "composer check-platform-reqs"
-    ]
+    ],
+    "serve": "php -S 0.0.0.0:61001"
   },
   "config": {
     "sort-packages": true
