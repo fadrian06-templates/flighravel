@@ -24,7 +24,7 @@
       "php -r \"if (!file_exists('.env.php')) copy('.env.dist.php', '.env.php');\""
     ],
     "ci": [
-      "composer check-platform-reqs",
+      "composer check-platform-reqs --no-ansi",
       "phpunit --colors=never",
       "phpstan -cphpstan.neon --no-progress --no-ansi"
     ]
