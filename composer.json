@@ -1,4 +1,8 @@
 {
+  "name": "faslatam/flighravel",
+  "type": "project",
+  "description": "A simple FlightPHP with Laravel folders template + PHP tooling + GH Actions",
+  "license": "MIT",
   "require": {
     "php": "^8.2",
     "flightphp/core": "^3.14"
@@ -26,7 +30,7 @@
     ],
     "ci": [
       "composer check-platform-reqs --no-ansi",
-      "phpunit --colors=never",
+      "phpunit --colors=never --no-progress",
       "phpstan -cphpstan.neon --no-progress --no-ansi",
       "rector --dry-run --no-progress-bar --no-ansi",
       "phpmd app resources/views routes .env.dist.php .env.php index.php rector.php tests text phpmd.xml",
