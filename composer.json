@@ -1,0 +1,17 @@
+{
+  "require": {
+    "php": "^8.2",
+    "flightphp/core": "^3.14"
+  },
+  "scripts": {
+    "pre-install-cmd": [
+      "composer check-platform-reqs"
+    ],
+    "pre-update-cmd": [
+      "composer check-platform-reqs"
+    ]
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
