@@ -1,2 +1,4 @@
 /vendor
 .env.php
+.env.test.php
+.phpunit.result.cache
