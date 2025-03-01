@@ -26,7 +26,8 @@
     "ci": [
       "composer check-platform-reqs --no-ansi",
       "phpunit --colors=never",
-      "phpstan -cphpstan.neon --no-progress --no-ansi"
+      "phpstan -cphpstan.neon --no-progress --no-ansi",
+      "rector --dry-run --no-progress-bar --no-ansi"
     ]
   },
   "config": {
@@ -40,6 +41,7 @@
     "phpstan/extension-installer": "^1.4",
     "phpstan/phpstan": "^2.1",
     "phpunit/phpunit": "^11.5",
+    "rector/rector": "^2.0",
     "symfony/var-dumper": "^7.2"
   }
 }

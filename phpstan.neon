@@ -5,6 +5,8 @@ parameters:
   level: 0
   paths:
     - app
+    - routes
+    - resources/views
     - tests
     - .env.dist.php
     - .env.php
