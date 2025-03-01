@@ -4,15 +4,18 @@
     "flightphp/core": "^3.14"
   },
   "scripts": {
-    "pre-install-cmd": [
-      "composer check-platform-reqs"
-    ],
-    "pre-update-cmd": [
-      "composer check-platform-reqs"
-    ],
-    "serve": "php -S 0.0.0.0:61001"
+    "pre-install-cmd": "composer run post-create-project-cmd",
+    "pre-update-cmd": "composer run post-create-project-cmd",
+    "serve": "php -S 0.0.0.0:61001",
+    "post-create-project-cmd": [
+      "composer check-platform-reqs",
+      "php -r \"if (!file_exists('.env.php')) copy('.env.dist.php', '.env.php');\""
+    ]
   },
   "config": {
     "sort-packages": true
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^7.2"
   }
 }
