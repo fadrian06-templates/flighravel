@@ -9,7 +9,7 @@ use PHPUnit\Framework\Attributes\Test;
 final class StatusCheckTest extends FeatureTestCase
 {
   #[Test]
-  function app_is_running(): void
+  function api_is_running(): void
   {
     $response = self::$client->get('./api/status');
 
