@@ -21,11 +21,11 @@
       "php -S 0.0.0.0:61001"
     ],
     "post-create-project-cmd": [
-      "composer check-platform-reqs",
       "php -r \"if (!file_exists('.env.php')) copy('.env.dist.php', '.env.php');\""
     ],
     "ci": [
-      "phpunit",
+      "composer check-platform-reqs",
+      "phpunit --colors=never",
       "phpstan -cphpstan.neon --no-progress --no-ansi"
     ]
   },
