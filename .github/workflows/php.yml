@@ -35,8 +35,5 @@ jobs:
     - name: Start PHP Development Server
       run: php -S localhost:61001 &
 
-    - name: Wait for server to start
-      run: sleep 5
-
     - name: Run ci suite
       run: composer run-script ci
