@@ -17,7 +17,7 @@ abstract class FeatureTestCase extends TestCase
 
     $_ENV['APP_URL'] ??= 'http://localhost:61001';
 
-    if (!str_ends_with($_ENV['APP_URL'], '/')) {
+    if (!str_ends_with((string) $_ENV['APP_URL'], '/')) {
       $_ENV['APP_URL'] .= '/';
     }
 
