@@ -27,7 +27,8 @@
       "composer check-platform-reqs --no-ansi",
       "phpunit --colors=never",
       "phpstan -cphpstan.neon --no-progress --no-ansi",
-      "rector --dry-run --no-progress-bar --no-ansi"
+      "rector --dry-run --no-progress-bar --no-ansi",
+      "phpmd app resources/views routes .env.dist.php .env.php index.php tests text phpmd.xml"
     ]
   },
   "config": {
@@ -38,6 +39,7 @@
   },
   "require-dev": {
     "guzzlehttp/guzzle": "^7.9",
+    "phpmd/phpmd": "^2.15",
     "phpstan/extension-installer": "^1.4",
     "phpstan/phpstan": "^2.1",
     "phpunit/phpunit": "^11.5",
