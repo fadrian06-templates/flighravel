@@ -4,3 +4,4 @@
 .env.test.php
 .phpunit.result.cache
 *.sublime-*
+phpcs.xml

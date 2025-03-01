@@ -11,3 +11,4 @@ parameters:
     - .env.dist.php
     - .env.php
     - index.php
+    - rector.php

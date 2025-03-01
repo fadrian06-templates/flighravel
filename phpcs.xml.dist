@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="vendor/squizlabs/php_codesniffer/phpcs.xsd">
+  <description />
+  <arg name="colors" />
+  <arg name="tab-width" value="2" />
+  <rule ref="PSR12" />
+  <rule ref="Generic.WhiteSpace.ScopeIndent">
+    <properties>
+      <property name="indent" value="2" />
+    </properties>
+  </rule>
+  <rule ref="PSR2.Methods.FunctionCallSignature">
+    <properties>
+      <property name="requiredSpacesAfterOpen" value="0" />
+      <property name="requiredSpacesBeforeClose" value="0" />
+      <property name="allowMultipleArguments" value="false" />
+      <property name="indent" value="2" />
+    </properties>
+  </rule>
+  <file>app/</file>
+  <file>resources/views/</file>
+  <file>routes/</file>
+  <file>tests/</file>
+  <file>index.php</file>
+  <file>.env.dist.php</file>
+  <file>.env.php</file>
+  <file>rector.php</file>
+</ruleset>
