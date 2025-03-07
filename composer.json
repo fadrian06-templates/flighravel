@@ -26,7 +26,8 @@
     ],
     "post-create-project-cmd": [
       "php -r \"if (!file_exists('.env.php')) copy('.env.dist.php', '.env.php');\"",
-      "php -r \"if (!file_exists('phpcs.xml')) copy('phpcs.xml.dist', 'phpcs.xml');\""
+      "php -r \"if (!file_exists('phpcs.xml')) copy('phpcs.xml.dist', 'phpcs.xml');\"",
+      "php -r \"if (!file_exists('phpstan.neon')) copy('phpstan.dist.neon', 'phpstan.neon');\""
     ],
     "ci": [
       "composer check-platform-reqs --no-ansi",
