@@ -27,4 +27,5 @@
   <file>.env.dist.php</file>
   <file>.env.php</file>
   <file>rector.php</file>
+  <exclude-pattern>vendor</exclude-pattern>
 </ruleset>

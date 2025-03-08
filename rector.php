@@ -15,6 +15,7 @@ return RectorConfig::configure()
     __DIR__ . '/.env.dist.php',
     __DIR__ . '/.env.php',
   ])
+  ->withSkipPath(__DIR__ . '/vendor')
   ->withPhpSets(php82: true)
   ->withPreparedSets(typeDeclarations: true)
   ->withRules([DeclareStrictTypesRector::class]);
