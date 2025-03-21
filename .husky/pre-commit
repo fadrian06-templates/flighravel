@@ -1,2 +1,2 @@
 composer validate --no-ansi
-composer ci
+composer ci --no-ansi
