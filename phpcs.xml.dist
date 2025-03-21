@@ -19,6 +19,7 @@
 
   <rule ref="MySource">
     <exclude name="MySource.Channels.IncludeSystem.NotIncludedCall" />
+    <exclude name="MySource.PHP.ReturnFunctionValue.NotAssigned" />
   </rule>
 
   <rule ref="PEAR">
@@ -74,6 +75,30 @@
   </rule>
 
   <rule ref="PEAR.WhiteSpace.ScopeIndent">
+    <properties>
+      <property name="indent" value="2" />
+    </properties>
+  </rule>
+
+  <rule ref="Squiz.WhiteSpace.ObjectOperatorSpacing">
+    <properties>
+      <property name="ignoreNewlines" value="true" />
+    </properties>
+  </rule>
+
+  <rule ref="PEAR.WhiteSpace.ObjectOperatorIndent">
+    <properties>
+      <property name="indent" value="2" />
+    </properties>
+  </rule>
+
+  <rule ref="Generic.Arrays.ArrayIndent">
+    <properties>
+      <property name="indent" value="2" />
+    </properties>
+  </rule>
+
+  <rule ref="PSR2.Functions.FunctionCallSignature">
     <properties>
       <property name="indent" value="2" />
     </properties>
