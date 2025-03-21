@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-require_once 'vendor/autoload.php';
-require_once 'routes/web.php';
-require_once 'routes/api.php';
+require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/routes/web.php';
+require_once __DIR__ . '/routes/api.php';
 
 $_ENV += (require '.env.php') + (require '.env.dist.php');
 
