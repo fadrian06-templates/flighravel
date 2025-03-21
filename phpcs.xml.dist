@@ -98,7 +98,7 @@
     </properties>
   </rule>
 
-  <rule ref="PSR2.Functions.FunctionCallSignature">
+  <rule ref="PSR2.Methods.FunctionCallSignature">
     <properties>
       <property name="indent" value="2" />
     </properties>
