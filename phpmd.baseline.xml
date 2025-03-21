@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<phpmd-baseline>
+  <violation
+    rule="PHPMD\Rule\Controversial\Superglobals"
+    file="tests/Feature/FeatureTestCase.php"
+    method="__construct" />
+</phpmd-baseline>
