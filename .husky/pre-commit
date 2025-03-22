@@ -1,2 +1,3 @@
 composer validate --no-ansi
 composer ci --no-ansi
+npm run ci
