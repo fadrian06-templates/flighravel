@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8856107182f5b076017575e5e43b3c23",
+    "content-hash": "73e88738b56e995b7f2719b077b2e0c4",
     "packages": [
         {
             "name": "flightphp/container",
-            "version": "v1.1.0",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flightphp/container.git",
-                "reference": "207f0dad0841e9c24f7fcc51b6755ed4ba3b8028"
+                "reference": "0e4b4b9921b92aaa86cf15baa15aa7db3774dbfa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flightphp/container/zipball/207f0dad0841e9c24f7fcc51b6755ed4ba3b8028",
-                "reference": "207f0dad0841e9c24f7fcc51b6755ed4ba3b8028",
+                "url": "https://api.github.com/repos/flightphp/container/zipball/0e4b4b9921b92aaa86cf15baa15aa7db3774dbfa",
+                "reference": "0e4b4b9921b92aaa86cf15baa15aa7db3774dbfa",
                 "shasum": ""
             },
             "require": {
@@ -50,9 +50,9 @@
             "description": "FlightPHP Dependency Injection Container",
             "support": {
                 "issues": "https://github.com/flightphp/container/issues",
-                "source": "https://github.com/flightphp/container/tree/v1.1.0"
+                "source": "https://github.com/flightphp/container/tree/v1.2.0"
             },
-            "time": "2025-03-13T06:01:12+00:00"
+            "time": "2025-03-22T20:48:14+00:00"
         },
         {
             "name": "flightphp/core",

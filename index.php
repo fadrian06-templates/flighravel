@@ -12,7 +12,7 @@ $_ENV += (require '.env.php') + (require '.env.dist.php');
 
 $container = new Container();
 
-$container->set(PDO::class, static fn(): PDO => new PDO(
+$container->singleton(PDO::class, static fn(): PDO => new PDO(
   match (strtolower((string) $_ENV['DB_CONNECTION'])) {
     'sqlite' => 'sqlite:'
       . __DIR__
