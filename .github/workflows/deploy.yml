@@ -17,6 +17,14 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-php-
 
+    - name: Use Node.js 18
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build --if-present
+
     - name: Install dependencies
       run: composer install --no-dev --prefer-dist --no-progress
 
@@ -28,3 +36,28 @@ jobs:
         password: ${{ secrets.ftp_password }}
         port: ${{ secrets.ftp_port }}
         server-dir: ${{ secrets.ftp_server_dir }}
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/.husky/**
+          **/node_modules/**
+          **/resources/css/**
+          **/resources/js/**
+          **/tests/**
+          .editorconfig
+          .phpunit.result.cache
+          biome.json
+          composer.json
+          composer.lock
+          LICENSE
+          package-lock.json
+          package.json
+          phpcs.xml
+          phpcs.xml.dist
+          phpmd.baseline.xml
+          phpmd.xml
+          phpstan-baseline.neon
+          phpstan.dist.neon
+          phpstan.neon
+          phpunit.xml
+          rector.php
