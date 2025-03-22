@@ -15,11 +15,15 @@
     <exclude name="Generic.Files.LowercasedFilename.NotFound" />
     <exclude name="Generic.NamingConventions.AbstractClassNamePrefix.Missing" />
     <exclude name="Generic.Classes.OpeningBraceSameLine.BraceOnNewLine" />
+    <exclude name="Generic.Formatting.NoSpaceAfterCast.SpaceFound" />
+    <exclude name="Generic.Formatting.SpaceBeforeCast.NoSpace" />
+    <exclude name="Generic.Functions.OpeningFunctionBraceKernighanRitchie.BraceOnNewLine" />
   </rule>
 
   <rule ref="MySource">
     <exclude name="MySource.Channels.IncludeSystem.NotIncludedCall" />
     <exclude name="MySource.PHP.ReturnFunctionValue.NotAssigned" />
+    <exclude name="MySource.Commenting.FunctionComment.Missing" />
   </rule>
 
   <rule ref="PEAR">
@@ -28,6 +32,7 @@
     <exclude name="PEAR.Functions.FunctionCallSignature.MultipleArguments" />
     <exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine" />
     <exclude name="PEAR.Commenting.ClassComment.Missing" />
+    <exclude name="PEAR.Commenting.FunctionComment.Missing" />
   </rule>
 
   <rule ref="PSR1" />
@@ -42,6 +47,9 @@
     <exclude name="Squiz.Files.FileExtension.ClassFound" />
     <exclude name="Squiz.Commenting.ClassComment.Missing" />
     <exclude name="Squiz.Commenting.ClosingDeclarationComment.Missing" />
+    <exclude name="Squiz.Strings.DoubleQuoteUsage.ContainsVar" />
+    <exclude name="Squiz.Commenting.FunctionComment.Missing" />
+    <exclude name="Squiz.WhiteSpace.FunctionClosingBraceSpace.SpacingBeforeClose" />
   </rule>
 
   <rule ref="Zend" />
@@ -59,6 +67,7 @@
   <rule ref="Squiz.Strings.ConcatenationSpacing">
     <properties>
       <property name="spacing" value="1" />
+      <property name="ignoreNewlines" value="true" />
     </properties>
   </rule>
 
@@ -101,6 +110,14 @@
   <rule ref="PSR2.Methods.FunctionCallSignature">
     <properties>
       <property name="indent" value="2" />
+    </properties>
+  </rule>
+
+  <rule ref="Squiz.WhiteSpace.FunctionSpacing">
+    <properties>
+      <property name="spacing" value="1" />
+      <property name="spacingBeforeFirst" value="0" />
+      <property name="spacingAfterLast" value="0" />
     </properties>
   </rule>
 </ruleset>
