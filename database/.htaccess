@@ -1,0 +1,6 @@
+Options All -Indexes
+
+<Files *.db>
+  Order Allow,Deny
+  Deny from all
+</Files>
