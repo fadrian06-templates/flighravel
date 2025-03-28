@@ -1,0 +1,29 @@
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.6em;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body::after {
+  content: 'Styles from /resources/css/index.css';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 1.2em;
+  color: darkgray;
+  padding: .5em;
+}
+
+code {
+  color: red;
+  font-size: 1.4em;
+  font-weight: bold;
+  background-color: black;
+  padding: .2em;
+  border-radius: .3em;
+  word-break: break-all;
+}

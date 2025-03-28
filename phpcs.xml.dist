@@ -50,6 +50,7 @@
     <exclude name="Squiz.Strings.DoubleQuoteUsage.ContainsVar" />
     <exclude name="Squiz.Commenting.FunctionComment.Missing" />
     <exclude name="Squiz.WhiteSpace.FunctionClosingBraceSpace.SpacingBeforeClose" />
+    <exclude name="Squiz.PHP.EmbeddedPhp.ShortOpenEchoNoSemicolon" />
   </rule>
 
   <rule ref="Zend" />
@@ -119,5 +120,9 @@
       <property name="spacingBeforeFirst" value="0" />
       <property name="spacingAfterLast" value="0" />
     </properties>
+  </rule>
+
+  <rule ref="Generic.Files.InlineHTML.Found">
+    <exclude-pattern>resources/views</exclude-pattern>
   </rule>
 </ruleset>
