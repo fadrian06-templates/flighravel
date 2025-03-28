@@ -25,7 +25,8 @@
       "vendor",
       "composer.lock",
       "package-lock.json",
-      "*.sublime-workspace"
+      "*.sublime-*",
+      "dist"
     ]
   },
   "json": {

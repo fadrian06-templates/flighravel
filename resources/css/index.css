@@ -6,16 +6,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-body::after {
-  content: 'Styles from /resources/css/index.css';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  font-size: 1.2em;
-  color: darkgray;
-  padding: .5em;
+  &::after {
+    content: 'Styles from /resources/css/index.css';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 1.2em;
+    color: darkgray;
+    padding: .5em;
+  }
 }
 
 code {

@@ -14,13 +14,13 @@ declare(strict_types=1);
   <title><?= $_ENV['APP_NAME'] ?></title>
   <base href="<?= str_replace('index.php', '', $_SERVER['SCRIPT_NAME']) ?>" />
   <link rel="icon" href="./resources/images/favicon.svg" />
-  <link rel="stylesheet" href="./resources/css/index.css" />
+  <link rel="stylesheet" href="./resources/dist/index.css" />
 </head>
 
 <body>
   Edit&nbsp;<code><?= __FILE__ ?></code>
 
-  <script src="./resources/js/index.js"></script>
+  <script src="./resources/dist/index.js"></script>
 </body>
 
 </html>

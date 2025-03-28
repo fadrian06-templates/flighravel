@@ -1,3 +1,5 @@
+import '../css/index.css'
+
 const baseUri = document
   .querySelector('base')
   .getAttribute('href')
