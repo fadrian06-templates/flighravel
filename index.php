@@ -24,10 +24,10 @@ $container->singleton(PDO::class, static fn(): PDO => new PDO(
       . ';dbname='
       . $_ENV['DB_DATABASE']
       . ';port='
-      . $_ENV['DB_PORT']
+      . $_ENV['DB_PORT'],
   },
   $_ENV['DB_USERNAME'] ?? null,
-  $_ENV['DB_PASSWORD'] ?? null
+  $_ENV['DB_PASSWORD'] ?? null,
 ));
 
 Flight::registerContainerHandler($container->get(...));
