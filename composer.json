@@ -40,6 +40,10 @@
       "rector --dry-run --no-progress-bar --no-ansi",
       "phpmd app resources/views routes index.php rector.php tests text phpmd.xml",
       "phpcs --no-colors"
+    ],
+    "format": [
+      "rector --no-progress --no-ansi",
+      "phpcbf --no-colors"
     ]
   },
   "config": {

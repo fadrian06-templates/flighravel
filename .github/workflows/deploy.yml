@@ -41,8 +41,7 @@ jobs:
           **/.git*/**
           **/.husky/**
           **/node_modules/**
-          **/resources/css/**
-          **/resources/js/**
+          **/resources/src/**
           **/tests/**
           .editorconfig
           .phpunit.result.cache
