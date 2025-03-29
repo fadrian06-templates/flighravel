@@ -11,8 +11,6 @@ return RectorConfig::configure()
     __DIR__ . '/routes',
     __DIR__ . '/tests',
     __DIR__ . '/index.php',
-    __DIR__ . '/.env.dist.php',
-    __DIR__ . '/.env.php',
   ])
   ->withRootFiles()
   ->withSkipPath(__DIR__ . '/vendor')

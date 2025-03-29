@@ -9,7 +9,5 @@ parameters:
     - routes
     - resources/views
     - tests
-    - .env.dist.php
-    - .env.php
     - index.php
     - rector.php

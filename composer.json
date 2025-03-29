@@ -5,9 +5,10 @@
   "license": "MIT",
   "require": {
     "php": "^8.2",
+    "ext-pdo": "*",
     "flightphp/container": "^1.2",
     "flightphp/core": "^3.15",
-    "ext-pdo": "*"
+    "symfony/dotenv": "^7.2"
   },
   "autoload": {
     "psr-4": {
@@ -27,7 +28,7 @@
       "php -S 0.0.0.0:61001"
     ],
     "post-create-project-cmd": [
-      "php -r \"if (!file_exists('.env.php')) copy('.env.dist.php', '.env.php');\"",
+      "php -r \"if (!file_exists('.env')) copy('.env.dist', '.env');\"",
       "php -r \"if (!file_exists('phpcs.xml')) copy('phpcs.xml.dist', 'phpcs.xml');\"",
       "php -r \"if (!file_exists('phpstan.neon')) copy('phpstan.dist.neon', 'phpstan.neon');\"",
       "php -r \"if (!file_exists('phpunit.xml')) copy('phpunit.xml.dist', 'phpunit.xml');\""
@@ -37,7 +38,7 @@
       "phpunit --colors=never --no-progress",
       "phpstan -cphpstan.neon --no-progress --no-ansi",
       "rector --dry-run --no-progress-bar --no-ansi",
-      "phpmd app resources/views routes .env.dist.php .env.php index.php rector.php tests text phpmd.xml",
+      "phpmd app resources/views routes index.php rector.php tests text phpmd.xml",
       "phpcs --no-colors"
     ]
   },

@@ -3,12 +3,14 @@
 declare(strict_types=1);
 
 use flight\Container;
+use Symfony\Component\Dotenv\Dotenv;
 
 require_once __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/routes/web.php';
 require_once __DIR__ . '/routes/api.php';
 
-$_ENV += (require '.env.php') + (require '.env.dist.php');
+$dotenv = new Dotenv();
+$dotenv->load(__DIR__ . '/.env.dist', __DIR__ . '/.env');
 
 $container = new Container();
 

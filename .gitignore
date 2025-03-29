@@ -1,7 +1,7 @@
 /vendor
 /node_modules
-.env.php
-.env.test.php
+.env
+.env.test
 .phpunit.result.cache
 *.sublime-*
 phpcs.xml
@@ -10,3 +10,4 @@ phpunit.xml
 *.db
 .idea/
 resources/dist/
+env.d.ts
