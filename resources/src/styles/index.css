@@ -8,7 +8,7 @@ body {
   align-items: center;
 
   &::after {
-    content: 'Styles from /resources/css/index.css';
+    content: 'Styles from /resources/src/styles/index.css';
     position: absolute;
     bottom: 0;
     right: 0;

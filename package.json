@@ -1,13 +1,15 @@
 {
   "devDependencies": {
     "@biomejs/biome": "1.7.2",
+    "dotenv": "^16.4.7",
     "esbuild": "0.21.5",
     "husky": "^9.1.7"
   },
   "scripts": {
     "prepare": "husky",
     "ci": "biome ci ./ --colors=off",
-    "build": "esbuild ./resources/js/*.js --outdir=./resources/dist --bundle --minify",
-    "dev": "esbuild ./resources/js/*.js --outdir=./resources/dist --bundle --sourcemap --watch"
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/dev.mjs",
+    "format": "biome format ./"
   }
 }
