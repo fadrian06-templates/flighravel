@@ -1,5 +1,6 @@
 import { copyFileSync, existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { parse } from 'dotenv'
+// import { sassPlugin } from 'esbuild-sass-plugin'
 
 /** @type {import('esbuild').BuildOptions} */
 export const commonOptions = {
@@ -17,6 +18,11 @@ export const commonOptions = {
   outdir: 'resources/dist',
   target: ['es2018'],
   conditions: ['main'],
+  plugins: [
+    /*sassPlugin({
+      quietDeps: true,
+    }),*/
+  ],
 }
 
 if (!existsSync('.env')) {
