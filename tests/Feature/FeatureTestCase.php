@@ -11,9 +11,9 @@ abstract class FeatureTestCase extends TestCase
 {
   protected static Client $client;
 
-  public function __construct(string $name) // @phpstan-ignore-line
+  public function setUp(): void
   {
-    parent::__construct($name);
+    parent::setUp();
 
     $_ENV['APP_URL'] ??= 'http://localhost:61001';
 

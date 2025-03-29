@@ -26,7 +26,8 @@
       "composer.lock",
       "package-lock.json",
       "*.sublime-*",
-      "dist"
+      "dist",
+      "tsconfig.json"
     ]
   },
   "json": {
