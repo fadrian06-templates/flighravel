@@ -42,8 +42,8 @@
       "phpcs --no-colors"
     ],
     "format": [
-      "rector --no-progress --no-ansi",
-      "phpcbf --no-colors"
+      "rector --no-progress-bar",
+      "phpcbf"
     ]
   },
   "config": {
