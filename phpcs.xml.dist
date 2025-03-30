@@ -17,8 +17,10 @@
     <exclude name="Generic.Arrays.DisallowShortArraySyntax.Found" />
     <exclude name="Generic.Classes.OpeningBraceSameLine.BraceOnNewLine" />
     <exclude name="Generic.Files.EndFileNoNewline.Found" />
+    <exclude name="Generic.Formatting.MultipleStatementAlignment.NotSame" />
     <exclude name="Generic.Formatting.NoSpaceAfterCast.SpaceFound" />
     <exclude name="Generic.Formatting.SpaceBeforeCast.NoSpace" />
+    <exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine" />
     <exclude name="Generic.NamingConventions.AbstractClassNamePrefix.Missing" />
     <exclude name="Generic.PHP.UpperCaseConstant.Found" />
     <exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed" />
@@ -60,6 +62,7 @@
 
   <rule ref="MySource">
     <exclude name="MySource.Channels.IncludeSystem.NotIncludedCall" />
+    <exclude name="MySource.Channels.IncludeSystem.NotIncludedExtends" />
     <exclude name="MySource.Commenting.FunctionComment.Missing" />
     <exclude name="MySource.PHP.ReturnFunctionValue.NotAssigned" />
   </rule>
@@ -79,6 +82,12 @@
       <property name="allowMultipleArguments" value="true" />
       <property name="requiredSpacesAfterOpen" value="0" />
       <property name="requiredSpacesBeforeClose" value="0" />
+    </properties>
+  </rule>
+
+  <rule ref="PEAR.Functions.FunctionDeclaration">
+    <properties>
+      <property name="indent" value="2" />
     </properties>
   </rule>
 
@@ -128,6 +137,12 @@
     <exclude name="Squiz.PHP.EmbeddedPhp.ShortOpenEchoNoSemicolon" />
     <exclude name="Squiz.Strings.DoubleQuoteUsage.ContainsVar" />
     <exclude name="Squiz.WhiteSpace.FunctionClosingBraceSpace.SpacingBeforeClose" />
+  </rule>
+
+  <rule ref="Squiz.Functions.MultiLineFunctionDeclaration">
+    <properties>
+      <property name="indent" value="2" />
+    </properties>
   </rule>
 
   <rule ref="Squiz.Strings.ConcatenationSpacing">
