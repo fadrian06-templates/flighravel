@@ -9,10 +9,10 @@ require_once __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/routes/web.php';
 require_once __DIR__ . '/routes/api.php';
 
-$dotenv = new Dotenv();
+$dotenv = new Dotenv;
 $dotenv->load(__DIR__ . '/.env.dist', __DIR__ . '/.env');
 
-$container = new Container();
+$container = new Container;
 
 $container->singleton(PDO::class, static fn(): PDO => new PDO(
   match (strtolower((string) $_ENV['DB_CONNECTION'])) {

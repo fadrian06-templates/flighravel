@@ -5,56 +5,6 @@
   <description />
   <arg name="colors" />
   <arg name="tab-width" value="2" />
-
-  <rule ref="Generic">
-    <exclude name="Generic.PHP.ClosingPHPTag.NotFound" />
-    <exclude name="Generic.PHP.UpperCaseConstant.Found" />
-    <exclude name="Generic.Files.EndFileNoNewline.Found" />
-    <exclude name="Generic.Arrays.DisallowShortArraySyntax.Found" />
-    <exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed" />
-    <exclude name="Generic.Files.LowercasedFilename.NotFound" />
-    <exclude name="Generic.NamingConventions.AbstractClassNamePrefix.Missing" />
-    <exclude name="Generic.Classes.OpeningBraceSameLine.BraceOnNewLine" />
-    <exclude name="Generic.Formatting.NoSpaceAfterCast.SpaceFound" />
-    <exclude name="Generic.Formatting.SpaceBeforeCast.NoSpace" />
-    <exclude name="Generic.Functions.OpeningFunctionBraceKernighanRitchie.BraceOnNewLine" />
-  </rule>
-
-  <rule ref="MySource">
-    <exclude name="MySource.Channels.IncludeSystem.NotIncludedCall" />
-    <exclude name="MySource.PHP.ReturnFunctionValue.NotAssigned" />
-    <exclude name="MySource.Commenting.FunctionComment.Missing" />
-  </rule>
-
-  <rule ref="PEAR">
-    <exclude name="PEAR.Commenting.FileComment.Missing" />
-    <exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket" />
-    <exclude name="PEAR.Functions.FunctionCallSignature.MultipleArguments" />
-    <exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine" />
-    <exclude name="PEAR.Commenting.ClassComment.Missing" />
-    <exclude name="PEAR.Commenting.FunctionComment.Missing" />
-  </rule>
-
-  <rule ref="PSR1" />
-
-  <rule ref="PSR12" />
-
-  <rule ref="PSR2" />
-
-  <rule ref="Squiz">
-    <exclude name="Squiz.Commenting.FileComment.Missing" />
-    <exclude name="Squiz.Formatting.OperatorBracket.MissingBrackets" />
-    <exclude name="Squiz.Files.FileExtension.ClassFound" />
-    <exclude name="Squiz.Commenting.ClassComment.Missing" />
-    <exclude name="Squiz.Commenting.ClosingDeclarationComment.Missing" />
-    <exclude name="Squiz.Strings.DoubleQuoteUsage.ContainsVar" />
-    <exclude name="Squiz.Commenting.FunctionComment.Missing" />
-    <exclude name="Squiz.WhiteSpace.FunctionClosingBraceSpace.SpacingBeforeClose" />
-    <exclude name="Squiz.PHP.EmbeddedPhp.ShortOpenEchoNoSemicolon" />
-  </rule>
-
-  <rule ref="Zend" />
-
   <file>app/</file>
   <file>resources/views/</file>
   <file>routes/</file>
@@ -63,41 +13,15 @@
   <file>rector.php</file>
   <exclude-pattern>vendor</exclude-pattern>
 
-  <rule ref="Squiz.Strings.ConcatenationSpacing">
-    <properties>
-      <property name="spacing" value="1" />
-      <property name="ignoreNewlines" value="true" />
-    </properties>
-  </rule>
-
-  <rule ref="PEAR.Functions.FunctionCallSignature">
-    <properties>
-      <property name="indent" value="2" />
-    </properties>
-  </rule>
-
-  <rule ref="Generic.WhiteSpace.ScopeIndent">
-    <properties>
-      <property name="indent" value="2" />
-    </properties>
-  </rule>
-
-  <rule ref="PEAR.WhiteSpace.ScopeIndent">
-    <properties>
-      <property name="indent" value="2" />
-    </properties>
-  </rule>
-
-  <rule ref="Squiz.WhiteSpace.ObjectOperatorSpacing">
-    <properties>
-      <property name="ignoreNewlines" value="true" />
-    </properties>
-  </rule>
-
-  <rule ref="PEAR.WhiteSpace.ObjectOperatorIndent">
-    <properties>
-      <property name="indent" value="2" />
-    </properties>
+  <rule ref="Generic">
+    <exclude name="Generic.Arrays.DisallowShortArraySyntax.Found" />
+    <exclude name="Generic.Classes.OpeningBraceSameLine.BraceOnNewLine" />
+    <exclude name="Generic.Files.EndFileNoNewline.Found" />
+    <exclude name="Generic.Formatting.NoSpaceAfterCast.SpaceFound" />
+    <exclude name="Generic.Formatting.SpaceBeforeCast.NoSpace" />
+    <exclude name="Generic.NamingConventions.AbstractClassNamePrefix.Missing" />
+    <exclude name="Generic.PHP.UpperCaseConstant.Found" />
+    <exclude name="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed" />
   </rule>
 
   <rule ref="Generic.Arrays.ArrayIndent">
@@ -106,9 +30,110 @@
     </properties>
   </rule>
 
+  <rule ref="Generic.Files.InlineHTML.Found">
+    <exclude-pattern>resources/views</exclude-pattern>
+  </rule>
+
+  <rule ref="Generic.Files.LowercasedFilename">
+    <include-pattern>database</include-pattern>
+    <include-pattern>resources</include-pattern>
+    <include-pattern>routes</include-pattern>
+    <include-pattern>scripts</include-pattern>
+  </rule>
+
+  <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie">
+    <properties>
+      <property name="checkFunctions" value="false" />
+      <property name="checkClosures" value="true" />
+    </properties>
+  </rule>
+
+  <rule ref="Generic.PHP.ClosingPHPTag">
+    <include-pattern>resources/views</include-pattern>
+  </rule>
+
+  <rule ref="Generic.WhiteSpace.ScopeIndent">
+    <properties>
+      <property name="indent" value="2" />
+    </properties>
+  </rule>
+
+  <rule ref="MySource">
+    <exclude name="MySource.Channels.IncludeSystem.NotIncludedCall" />
+    <exclude name="MySource.Commenting.FunctionComment.Missing" />
+    <exclude name="MySource.PHP.ReturnFunctionValue.NotAssigned" />
+  </rule>
+
+  <rule ref="PEAR">
+    <exclude name="PEAR.Commenting.ClassComment.Missing" />
+    <exclude name="PEAR.Commenting.FileComment.Missing" />
+    <exclude name="PEAR.Commenting.FunctionComment.Missing" />
+    <exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine" />
+    <exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket" />
+    <exclude name="PEAR.Functions.FunctionCallSignature.MultipleArguments" />
+  </rule>
+
+  <rule ref="PEAR.Functions.FunctionCallSignature">
+    <properties>
+      <property name="indent" value="2" />
+      <property name="allowMultipleArguments" value="true" />
+      <property name="requiredSpacesAfterOpen" value="0" />
+      <property name="requiredSpacesBeforeClose" value="0" />
+    </properties>
+  </rule>
+
+  <rule ref="PEAR.WhiteSpace.ObjectOperatorIndent">
+    <properties>
+      <property name="indent" value="2" />
+      <property name="multilevel" value="false" />
+    </properties>
+  </rule>
+
+  <rule ref="PEAR.WhiteSpace.ScopeIndent">
+    <properties>
+      <property name="indent" value="2" />
+      <property name="exact" value="true" />
+      <property name="tabIndent" value="false" />
+      <!-- <property name="tabWidth" value="2" /> -->
+      <property name="ignoreIndentationTokens" type="array">
+        <!-- <element value="" /> -->
+      </property>
+    </properties>
+  </rule>
+
+  <rule ref="PSR1" />
+
+  <rule ref="PSR12">
+    <exclude name="PSR12.Classes.ClassInstantiation.MissingParentheses" />
+  </rule>
+
+  <rule ref="PSR2" />
+
   <rule ref="PSR2.Methods.FunctionCallSignature">
     <properties>
       <property name="indent" value="2" />
+      <property name="allowMultipleArguments" value="false" />
+      <property name="requiredSpacesAfterOpen" value="0" />
+      <property name="requiredSpacesBeforeClose" value="0" />
+    </properties>
+  </rule>
+
+  <rule ref="Squiz">
+    <exclude name="Squiz.Commenting.ClassComment.Missing" />
+    <exclude name="Squiz.Commenting.ClosingDeclarationComment.Missing" />
+    <exclude name="Squiz.Commenting.FileComment.Missing" />
+    <exclude name="Squiz.Commenting.FunctionComment.Missing" />
+    <exclude name="Squiz.Files.FileExtension.ClassFound" />
+    <exclude name="Squiz.Formatting.OperatorBracket.MissingBrackets" />
+    <exclude name="Squiz.PHP.EmbeddedPhp.ShortOpenEchoNoSemicolon" />
+    <exclude name="Squiz.Strings.DoubleQuoteUsage.ContainsVar" />
+    <exclude name="Squiz.WhiteSpace.FunctionClosingBraceSpace.SpacingBeforeClose" />
+  </rule>
+
+  <rule ref="Squiz.Strings.ConcatenationSpacing">
+    <properties>
+      <property name="spacing" value="1" />
+      <property name="ignoreNewlines" value="true" />
     </properties>
   </rule>
 
@@ -120,7 +145,11 @@
     </properties>
   </rule>
 
-  <rule ref="Generic.Files.InlineHTML.Found">
-    <exclude-pattern>resources/views</exclude-pattern>
+  <rule ref="Squiz.WhiteSpace.ObjectOperatorSpacing">
+    <properties>
+      <property name="ignoreNewlines" value="true" />
+    </properties>
   </rule>
+
+  <rule ref="Zend" />
 </ruleset>
