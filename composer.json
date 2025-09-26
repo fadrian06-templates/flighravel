@@ -36,7 +36,7 @@
     "ci": [
       "composer check-platform-reqs --no-ansi",
       "phpunit --colors=never --no-progress",
-      "phpstan -cphpstan.neon --no-progress --no-ansi",
+      "phpstan --no-progress --no-ansi",
       "rector --dry-run --no-progress-bar --no-ansi",
       "phpmd app resources/views routes index.php rector.php tests text phpmd.xml",
       "phpcs --no-colors"
