@@ -11,18 +11,21 @@ abstract class FeatureTestCase extends TestCase
 {
   protected static Client $client;
 
+  /**
+   * @SuppressWarnings("superglobals")
+   */
   public function setUp(): void
   {
     parent::setUp();
 
     $_ENV['APP_URL'] ??= 'http://localhost:61001';
 
-    if (!str_ends_with((string) $_ENV['APP_URL'], '/')) {
+    if (!str_ends_with(strval($_ENV['APP_URL']), '/')) {
       $_ENV['APP_URL'] .= '/';
     }
 
     self::$client ??= new Client([
-      'base_uri' => $_ENV['APP_URL']
+      'base_uri' => $_ENV['APP_URL'],
     ]);
   }
 }

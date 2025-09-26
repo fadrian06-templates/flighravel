@@ -16,6 +16,7 @@
   <rule ref="Generic">
     <exclude name="Generic.Arrays.DisallowShortArraySyntax.Found" />
     <exclude name="Generic.Classes.OpeningBraceSameLine.BraceOnNewLine" />
+    <exclude name="Generic.Commenting.DocComment.MissingShort" />
     <exclude name="Generic.Files.EndFileNoNewline.Found" />
     <exclude name="Generic.Formatting.MultipleStatementAlignment.NotSame" />
     <exclude name="Generic.Formatting.NoSpaceAfterCast.SpaceFound" />
@@ -43,6 +44,12 @@
     <include-pattern>scripts</include-pattern>
   </rule>
 
+  <rule ref="Generic.Formatting.SpaceAfterNot">
+    <properties>
+      <property name="spacing" value="0" />
+    </properties>
+  </rule>
+
   <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie">
     <properties>
       <property name="checkFunctions" value="false" />
@@ -60,13 +67,6 @@
     </properties>
   </rule>
 
-  <rule ref="MySource">
-    <exclude name="MySource.Channels.IncludeSystem.NotIncludedCall" />
-    <exclude name="MySource.Channels.IncludeSystem.NotIncludedExtends" />
-    <exclude name="MySource.Commenting.FunctionComment.Missing" />
-    <exclude name="MySource.PHP.ReturnFunctionValue.NotAssigned" />
-  </rule>
-
   <rule ref="PEAR">
     <exclude name="PEAR.Commenting.ClassComment.Missing" />
     <exclude name="PEAR.Commenting.FileComment.Missing" />
@@ -74,6 +74,14 @@
     <exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine" />
     <exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket" />
     <exclude name="PEAR.Functions.FunctionCallSignature.MultipleArguments" />
+  </rule>
+
+  <rule ref="PEAR.Commenting.FunctionComment">
+    <properties>
+      <property name="specialMethods" type="array">
+        <element value="setUp" />
+      </property>
+    </properties>
   </rule>
 
   <rule ref="PEAR.Functions.FunctionCallSignature">
@@ -132,11 +140,21 @@
     <exclude name="Squiz.Commenting.ClosingDeclarationComment.Missing" />
     <exclude name="Squiz.Commenting.FileComment.Missing" />
     <exclude name="Squiz.Commenting.FunctionComment.Missing" />
+    <exclude name="Squiz.Commenting.VariableComment.Missing" />
     <exclude name="Squiz.Files.FileExtension.ClassFound" />
     <exclude name="Squiz.Formatting.OperatorBracket.MissingBrackets" />
+    <exclude name="Squiz.Operators.ComparisonOperatorUsage.NotAllowed" />
     <exclude name="Squiz.PHP.EmbeddedPhp.ShortOpenEchoNoSemicolon" />
     <exclude name="Squiz.Strings.DoubleQuoteUsage.ContainsVar" />
     <exclude name="Squiz.WhiteSpace.FunctionClosingBraceSpace.SpacingBeforeClose" />
+  </rule>
+
+  <rule ref="Squiz.Commenting.FunctionComment">
+    <properties>
+      <property name="specialMethods" type="array">
+        <element value="setUp" />
+      </property>
+    </properties>
   </rule>
 
   <rule ref="Squiz.Functions.MultiLineFunctionDeclaration">
@@ -160,11 +178,19 @@
     </properties>
   </rule>
 
+  <rule ref="Squiz.WhiteSpace.MemberVarSpacing">
+    <properties>
+      <property name="spacingBeforeFirst" value="0" />
+    </properties>
+  </rule>
+
   <rule ref="Squiz.WhiteSpace.ObjectOperatorSpacing">
     <properties>
       <property name="ignoreNewlines" value="true" />
     </properties>
   </rule>
 
-  <rule ref="Zend" />
+  <rule ref="Zend">
+    <exclude name="Zend.NamingConventions.ValidVariableName.PrivateNoUnderscore" />
+  </rule>
 </ruleset>
